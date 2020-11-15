@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestSlabon</name>
+    </assembly>
+    <members>
+        <member name="M:TestSlabon.Controllers.AuthController.Login(TestSlabon.Models.Request.LoginRequest)">
+            <summary>
+            Endpoint de login 
+            </summary>
+            <remarks>Aqui es donde él usuario se autentica, necesitas enviar el `email` y `contraseña` de un usuario registrado, la información es validada, si es un usuario válido la API regresa como respuesta los datos del usuario con el `token`.</remarks>
+            <response code="200">Operación exitosa</response>
+            <response code="400">Indica que el servidor no puede o no procesará la solicitud debido a algo que se percibe como un error del cliente </response>
+            <response code="500">Oops! Error en el servidor </response>
+        </member>
+        <member name="M:TestSlabon.Controllers.ErrorController.Get">
+            <summary>
+            Recurso no encontrado
+            </summary>
+            <remarks>Es utilizado para cuando no se encuentra un recurso solicitado</remarks>
+        </member>
+        <member name="M:TestSlabon.Controllers.UsersController.Get">
+            <summary>
+            Listar usuario
+            </summary>
+            <remarks>Aqui es donde podras consultar la lista de usuarios.</remarks>
+            <response code="200">Operación exitosa</response>
+            <response code="400">Indica que el servidor no puede o no procesará la solicitud debido a algo que se percibe como un error del cliente </response>
+            <response code="500">Oops! Error en el servidor </response>
+        </member>
+        <member name="M:TestSlabon.Controllers.UsersController.GetById(System.Int32)">
+            <summary>
+            Consulta usuario por id
+            </summary>
+            <param name="id"></param>
+                    [Consumes(MediaTypeNames.Application.Json)]
+            <response code="200">Operación exitosa</response>
+            <response code="400">Indica que el servidor no puede o no procesará la solicitud debido a algo que se percibe como un error del cliente </response>
+            <response code="404">Recurso no encontrado</response>
+            <response code="500">Oops! Error en el servidor </response>
+        </member>
+        <member name="M:TestSlabon.Controllers.UsersController.Put(System.Int32,TestSlabon.Models.Request.UserRequest)">
+            <summary>
+            Editar usuario por id
+            </summary>
+            <param name="id"></param>
+            <response code="200">Operación exitosa</response>
+            <response code="400">Indica que el servidor no puede o no procesará la solicitud debido a algo que se percibe como un error del cliente </response>
+            <response code="404">Recurso no encontrado</response>
+            <response code="500">Oops! Error en el servidor </response>
+        </member>
+        <member name="M:TestSlabon.Controllers.UsersController.Post(TestSlabon.Models.Request.UserRequest)">
+            <summary>
+            Listar usuario
+            </summary>
+            <response code="201">Recurso creado con exito</response>
+            <response code="400">Indica que el servidor no puede o no procesará la solicitud debido a algo que se percibe como un error del cliente </response>
+            <response code="404">Recurso no encontrado</response>
+            <response code="500">Oops! Error en el servidor </response>
+        </member>
+        <member name="M:TestSlabon.Controllers.UsersController.Delete(System.Int32)">
+            <summary>
+            Listar usuario
+            </summary>
+            <response code="200">Operación exitosa</response>
+            <response code="400">Indica que el servidor no puede o no procesará la solicitud debido a algo que se percibe como un error del cliente </response>
+            <response code="404">Recurso no encontrado</response>
+            <response code="500">Oops! Error en el servidor </response>
+        </member>
+        <member name="M:TestSlabon.Utils.Helper.GetSHA256(System.String)">
+            <summary>
+            SHA-2 ( Secure Hash Algorithm 2 ) SHA-256
+            Diseñadas por la Agencia de Seguridad Nacional de los Estados Unidos (NSA)
+            Los proveedores de Unix y Linux están pasando a usar SHA-2 de 256 y 512 bits para el hash seguro de contraseñas
+            Varias criptomonedas como Bitcoin usan SHA-256
+            Encriptación de un solo camino
+            </summary>
+            <param name="pass" example="Contr@sen@">Contraseña a encriptar</param>
+        </member>
+        <member name="M:TestSlabon.Utils.Helper.GetErrors(Microsoft.AspNetCore.Mvc.ModelBinding.ModelStateDictionary)">
+            <summary>
+            Obtener la lista de errores del request enviado => ModelState
+            </summary>
+            <param name="model">ModelStateDictionary</param>
+        </member>
+        <member name="M:TestSlabon.Utils.Helper.ErrorResponse(Microsoft.AspNetCore.Mvc.ActionContext)">
+            <summary>
+            El response a enviar al cliente cn codigo 400
+            </summary>
+            <param name="actionContext">ActionContext</param>
+        </member>
+        <member name="M:TestSlabon.Utils.Helper.GenarateToken(TestSlabon.Models.Entities.Users,Microsoft.Extensions.Configuration.IConfiguration)">
+            <summary>
+            Genera el token 
+            </summary>
+            <param name="user">Modelo Usuario </param>
+            <param name="configuration">proveedor de configuración para extrar los datos del appsettings.json</param>
+        </member>
+    </members>
+</doc>

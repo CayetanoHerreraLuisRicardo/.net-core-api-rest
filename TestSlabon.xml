@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TestSlabon</name>
+    </assembly>
+    <members>
+        <member name="M:TestSlabon.Controllers.AuthController.Login(TestSlabon.Models.Request.LoginRequest)">
+            <summary>
+            Endpoint de login 
+            </summary>
+            <remarks>Awesomeness!</remarks>
+            <response code="200">Login exitoso</response>
+            <response code="400">Login incorrecto</response>
+            <response code="500">Oops! Error en el servidor </response>
+        </member>
+        <member name="M:TestSlabon.Controllers.ErrorController.Get">
+            <summary>
+            Endpoint de login 
+            </summary>
+            <remarks>Awesomeness!</remarks>
+        </member>
+        <member name="M:TestSlabon.Controllers.UsersController.Get">
+            <summary>
+            Listar usuario
+            </summary>
+        </member>
+        <member name="M:TestSlabon.Controllers.UsersController.Get(System.Int32)">
+            <summary>
+            Consulta usuario por id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:TestSlabon.Controllers.UsersController.Put(System.Int32,TestSlabon.Models.Entities.Users)">
+            <summary>
+            Editar usuario por id
+            </summary>
+            <param name="id"></param>
+        </member>
+        <member name="M:TestSlabon.Controllers.UsersController.Post(TestSlabon.Models.Entities.Users)">
+            <summary>
+            Listar usuario
+            </summary>
+        </member>
+        <member name="M:TestSlabon.Controllers.UsersController.Delete(System.Int32)">
+            <summary>
+            Listar usuario
+            </summary>
+        </member>
+    </members>
+</doc>
